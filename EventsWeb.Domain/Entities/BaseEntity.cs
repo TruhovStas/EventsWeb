@@ -1,5 +1,4 @@
-﻿
-namespace EventsWeb.Domain.Entities
+﻿namespace EventsWeb.Domain.Entities
 {
     public class BaseEntity
     {
