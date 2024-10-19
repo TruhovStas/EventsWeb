@@ -8,7 +8,7 @@
         public string Location { get; set; }
         public string? Category { get; set; }
         public int MaxParticipants { get; set; }
-        public List<Participant> Participants { get; set; }
+        public virtual IEnumerable<Participant>? Participants { get; set; }
         public string? Image { get; set; }
     }
 }

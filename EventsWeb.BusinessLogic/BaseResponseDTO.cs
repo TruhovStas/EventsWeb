@@ -1,4 +1,4 @@
-﻿namespace EventsWeb.DataAccess
+﻿namespace EventsWeb.BussinessLogic
 {
     public class BaseResponseDTO
     {

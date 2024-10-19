@@ -1,4 +1,4 @@
-﻿namespace EventsWeb.DataAccess.DTOs.Participants
+﻿namespace EventsWeb.BussinessLogic.DTOs.Participants
 {
     internal class ParticipantDto : BaseResponseDTO
     {

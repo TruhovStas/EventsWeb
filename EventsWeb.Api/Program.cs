@@ -1,3 +1,5 @@
+using EventsWeb.DataAccess;
+
 namespace EventsWeb
 {
     public class Program
@@ -8,7 +10,8 @@ namespace EventsWeb
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
-
+            //builder.Services.ConfigureSwagger();
+            builder.Services.AddDataAccess(builder.Configuration);
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.

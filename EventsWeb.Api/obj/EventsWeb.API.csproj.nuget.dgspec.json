@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Учёба\\csharp\\EventsWeb\\EventsWeb.Api\\EventsWeb.API.csproj": {}
+    "D:\\Учёба\\csharp\\EventsWeb\\EventsWeb.API\\EventsWeb.API.csproj": {}
   },
   "projects": {
-    "D:\\Учёба\\csharp\\EventsWeb\\EventsWeb.Api\\EventsWeb.API.csproj": {
+    "D:\\Учёба\\csharp\\EventsWeb\\EventsWeb.API\\EventsWeb.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Учёба\\csharp\\EventsWeb\\EventsWeb.Api\\EventsWeb.API.csproj",
+        "projectUniqueName": "D:\\Учёба\\csharp\\EventsWeb\\EventsWeb.API\\EventsWeb.API.csproj",
         "projectName": "EventsWeb.API",
-        "projectPath": "D:\\Учёба\\csharp\\EventsWeb\\EventsWeb.Api\\EventsWeb.API.csproj",
+        "projectPath": "D:\\Учёба\\csharp\\EventsWeb\\EventsWeb.API\\EventsWeb.API.csproj",
         "packagesPath": "C:\\Users\\Стас\\.nuget\\packages\\",
-        "outputPath": "D:\\Учёба\\csharp\\EventsWeb\\EventsWeb.Api\\obj\\",
+        "outputPath": "D:\\Учёба\\csharp\\EventsWeb\\EventsWeb.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -57,6 +57,18 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.9.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -168,7 +180,11 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\Учёба\\csharp\\EventsWeb\\EventsWeb.Domain\\EventsWeb.Domain.csproj": {
+                "projectPath": "D:\\Учёба\\csharp\\EventsWeb\\EventsWeb.Domain\\EventsWeb.Domain.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -180,6 +196,36 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Proxies": {
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.10, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

@@ -6,4 +6,19 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.10">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.9.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EventsWeb.BusinessLogic\EventsWeb.BusinessLogic.csproj" />
+    <ProjectReference Include="..\EventsWeb.DataAccess\EventsWeb.DataAccess.csproj" />
+    <ProjectReference Include="..\EventsWeb.Domain\EventsWeb.Domain.csproj" />
+    <ProjectReference Include="..\EventsWeb.Presentation\EventsWeb.Presentation.csproj" />
+  </ItemGroup>
+
 </Project>
