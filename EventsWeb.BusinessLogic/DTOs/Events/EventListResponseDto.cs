@@ -1,6 +1,6 @@
 ﻿namespace EventsWeb.BussinessLogic.DTOs.Events
 {
-    public class EventListDto : BaseResponseDTO
+    public class EventListResponseDto : BaseResponseDTO
     {
         public string Title { get; set; }
         public DateTime DateTime { get; set; }
