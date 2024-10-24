@@ -1,11 +1,11 @@
-﻿namespace EventsWeb.BusinessLogic.DTOs.Participants
+﻿namespace EventsWeb.BusinessLogic.Models.Participants
 {
-    public class CreateParticipantDto
+    public class ParticipantResponseDto : BaseResponseDto
     {
         public string Name { get; set; }
         public string LastName { get; set; }
         public DateOnly BirthDay { get; set; }
+        public DateTime RegistrationDate { get; set; }
         public string Email { get; set; }
-        public int EventId { get; set; }
     }
 }

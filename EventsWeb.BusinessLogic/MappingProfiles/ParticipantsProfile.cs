@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using EventsWeb.BusinessLogic.DTOs.Participants;
+using EventsWeb.BusinessLogic.Models.Participants;
 using EventsWeb.Domain.Entities;
 
 namespace EventsWeb.BusinessLogic.MappingProfiles
@@ -8,8 +8,8 @@ namespace EventsWeb.BusinessLogic.MappingProfiles
     {
         public ParticipantsProfile() 
         {
-            CreateMap<CreateParticipantDto, Participant>();
-            CreateMap<Participant, CreateParticipantResponseDto>();
+            CreateMap<ParticipantCreateDto, Participant>();
+            CreateMap<Participant, ParticipantCreateResponseDto>();
             CreateMap<Participant, ParticipantResponseDto>();
         }
     }

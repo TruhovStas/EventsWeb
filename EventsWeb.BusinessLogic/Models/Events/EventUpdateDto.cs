@@ -1,6 +1,6 @@
-﻿namespace EventsWeb.BussinessLogic.DTOs.Events
+﻿namespace EventsWeb.BusinessLogic.Models.Events
 {
-    public class EventCreateDto : BaseResponseDTO
+    public class EventUpdateDto : BaseResponseDto
     {
         public string Title { get; set; }
         public string Description { get; set; }

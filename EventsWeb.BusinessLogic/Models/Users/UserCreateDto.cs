@@ -1,4 +1,4 @@
-﻿namespace EventsWeb.BusinessLogic.DTOs.Users
+﻿namespace EventsWeb.BusinessLogic.Models.Users
 {
     public class UserCreateDto
     {   

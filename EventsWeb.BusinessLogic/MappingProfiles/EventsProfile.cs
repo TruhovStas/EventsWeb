@@ -1,6 +1,5 @@
 ﻿using AutoMapper;
-using EventsWeb.BusinessLogic.DTOs.Events;
-using EventsWeb.BussinessLogic.DTOs.Events;
+using EventsWeb.BusinessLogic.Models.Events;
 using EventsWeb.Domain.Entities;
 
 namespace EventsWeb.BusinessLogic.MappingProfiles
@@ -13,7 +12,6 @@ namespace EventsWeb.BusinessLogic.MappingProfiles
             CreateMap<Event, EventCreateResponseDto>();
             CreateMap<EventUpdateDto, Event>();
             CreateMap<EventCreateDto, Event>();
-            CreateMap<Event, EventListResponseDto>();
         }
     }
 }

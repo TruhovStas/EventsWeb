@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using EventsWeb.BusinessLogic.DTOs.Users;
+using EventsWeb.BusinessLogic.Models.Users;
 using EventsWeb.DataAccess.Entities;
 
 namespace EventsWeb.BusinessLogic.MappingProfiles
