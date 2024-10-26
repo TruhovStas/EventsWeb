@@ -11,12 +11,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("EventsWeb.API")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("EventsWeb.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
-[assembly: System.Reflection.AssemblyProductAttribute("EventsWeb.API")]
-[assembly: System.Reflection.AssemblyTitleAttribute("EventsWeb.API")]
+[assembly: System.Reflection.AssemblyProductAttribute("EventsWeb.Api")]
+[assembly: System.Reflection.AssemblyTitleAttribute("EventsWeb.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // Создано классом WriteCodeFragment MSBuild.

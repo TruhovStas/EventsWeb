@@ -18,10 +18,10 @@ namespace EventsWeb.BusinessLogic.Services.Impl
             _mapper = mapper;
         }
 
-        public async Task<IEnumerable<ParticipantResponseDto>> GetParticipantsAsync(CancellationToken cancellationToken)
+        public async Task<IEnumerable<ParticipantResponseDto>> GetParticipantsByEventAsync(int eventId, CancellationToken cancellationToken)
         {
             var participants = await _unitOfWork.Participants.GetAllAsync(cancellationToken);
-            return _mapper.Map<IEnumerable<ParticipantResponseDto>>(participants);
+            return _mapper.Map<IEnumerable<ParticipantResponseDto>>(participants.Where(p => p.Event.Id == eventId));
         }
 
         public async Task<IEnumerable<ParticipantResponseDto>> GetParticipantsByPageAsync(int page, int pageSize,

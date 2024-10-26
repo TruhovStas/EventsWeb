@@ -1,4 +1,4 @@
-﻿namespace EventsWeb.API
+﻿namespace EventsWeb.Api
 {
     public class SwaggerConfiguration
     {

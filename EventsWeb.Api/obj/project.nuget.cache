@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "YHDWTPoO66Hac6/RSu7zqdhYfq+ZPcqCruVt9TNtJx1OTIIST7BCU1UEGOb47VJu4EYvxazvuvHUlC2jdBiXAQ==",
+  "dgSpecHash": "OrBuCejU7nL9Q343IPr0sTIE1RweoaHZX4ueWgDfjabGPou1QuekI874ea15Mcz7BsYo8d/UywU9re0zahnCUA==",
   "success": true,
-  "projectFilePath": "D:\\Учёба\\csharp\\EventsWeb\\EventsWeb.Api\\EventsWeb.API.csproj",
+  "projectFilePath": "D:\\Учёба\\csharp\\EventsWeb\\EventsWeb.Api\\EventsWeb.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Стас\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\Стас\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34316.72
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventsWeb.API", "EventsWeb.Api\EventsWeb.API.csproj", "{20BC00D8-37A9-40DB-AA73-B88DEF218C4E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventsWeb.Api", "EventsWeb.Api\EventsWeb.Api.csproj", "{20BC00D8-37A9-40DB-AA73-B88DEF218C4E}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventsWeb.BusinessLogic", "EventsWeb.BusinessLogic\EventsWeb.BusinessLogic.csproj", "{43FC2404-90C3-45CE-90BD-7BF9D245194B}"
 EndProject

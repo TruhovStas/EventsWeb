@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Учёба\\csharp\\EventsWeb\\EventsWeb.Api\\EventsWeb.API.csproj": {}
+    "D:\\Учёба\\csharp\\EventsWeb\\EventsWeb.Api\\EventsWeb.Api.csproj": {}
   },
   "projects": {
-    "D:\\Учёба\\csharp\\EventsWeb\\EventsWeb.Api\\EventsWeb.API.csproj": {
+    "D:\\Учёба\\csharp\\EventsWeb\\EventsWeb.Api\\EventsWeb.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Учёба\\csharp\\EventsWeb\\EventsWeb.Api\\EventsWeb.API.csproj",
-        "projectName": "EventsWeb.API",
-        "projectPath": "D:\\Учёба\\csharp\\EventsWeb\\EventsWeb.Api\\EventsWeb.API.csproj",
+        "projectUniqueName": "D:\\Учёба\\csharp\\EventsWeb\\EventsWeb.Api\\EventsWeb.Api.csproj",
+        "projectName": "EventsWeb.Api",
+        "projectPath": "D:\\Учёба\\csharp\\EventsWeb\\EventsWeb.Api\\EventsWeb.Api.csproj",
         "packagesPath": "C:\\Users\\Стас\\.nuget\\packages\\",
         "outputPath": "D:\\Учёба\\csharp\\EventsWeb\\EventsWeb.Api\\obj\\",
         "projectStyle": "PackageReference",
