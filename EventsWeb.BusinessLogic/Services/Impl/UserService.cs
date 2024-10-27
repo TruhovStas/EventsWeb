@@ -53,7 +53,7 @@ namespace EventsWeb.BusinessLogic.Services.Impl
 
             var newUser = _mapper.Map<User>(userCreateDto);
 
-            await _userManager.CreateAsync(newUser, userCreateDto.Password);
+            var a =await _userManager.CreateAsync(newUser, userCreateDto.Password);
             var claims = new List<Claim>()
                 {
                     new Claim(ClaimTypes.Name, newUser.UserName),

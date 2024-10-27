@@ -18,10 +18,10 @@ namespace EventsWeb.BusinessLogic.Services.Impl
             _mapper = mapper;
         }
 
-        public async Task<IEnumerable<ParticipantResponseDto>> GetParticipantsByEventAsync(int eventId, CancellationToken cancellationToken)
+        public async Task<IEnumerable<ParticipantResponseDto>> GetParticipantsByEventAsync(int participantentId, CancellationToken cancellationToken)
         {
             var participants = await _unitOfWork.Participants.GetAllAsync(cancellationToken);
-            return _mapper.Map<IEnumerable<ParticipantResponseDto>>(participants.Where(p => p.Event.Id == eventId));
+            return _mapper.Map<IEnumerable<ParticipantResponseDto>>(participants.Where(p => p.Event.Id == participantentId));
         }
 
         public async Task<IEnumerable<ParticipantResponseDto>> GetParticipantsByPageAsync(int page, int pageSize,
@@ -33,27 +33,28 @@ namespace EventsWeb.BusinessLogic.Services.Impl
 
         public async Task<ParticipantResponseDto> GetParticipantByIdAsync(int id, CancellationToken cancellationToken)
         {
-            var ev = await _unitOfWork.Participants.GetByIdAsync(id, cancellationToken);
-            if (ev == null)
+            var participant = await _unitOfWork.Participants.GetByIdAsync(id, cancellationToken);
+            if (participant == null)
                 throw new NotFoundException("Participant not found");
-            return _mapper.Map<ParticipantResponseDto>(ev);
+            return _mapper.Map<ParticipantResponseDto>(participant);
         }
 
         public async Task<ParticipantCreateResponseDto> CreateParticipantAsync(ParticipantCreateDto participantCreateDto,
             CancellationToken cancellationToken)
         {
-            var ev = _mapper.Map<Participant>(participantCreateDto);
-            var createdParticipant = await _unitOfWork.Participants.AddAsync(ev, cancellationToken);
+            var participant = _mapper.Map<Participant>(participantCreateDto);
+            participant.RegistrationDate = DateTime.Now;
+            var createdParticipant = await _unitOfWork.Participants.AddAsync(participant, cancellationToken);
             await _unitOfWork.SaveChangesAsync(cancellationToken);
             return _mapper.Map<ParticipantCreateResponseDto>(createdParticipant);
         }
 
         public async Task<BaseResponseDto> DeleteParticipantAsync(int id, CancellationToken cancellationToken)
         {
-            var ev = await _unitOfWork.Participants.GetByIdAsync(id, cancellationToken);
-            if (ev == null)
+            var participant = await _unitOfWork.Participants.GetByIdAsync(id, cancellationToken);
+            if (participant == null)
                 throw new NotFoundException("Participant not found");
-            _unitOfWork.Participants.Delete(ev);
+            _unitOfWork.Participants.Delete(participant);
             await _unitOfWork.SaveChangesAsync(cancellationToken);
             return new BaseResponseDto() { Id = id };
         }

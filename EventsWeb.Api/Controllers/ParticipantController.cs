@@ -36,7 +36,7 @@ namespace EventsWeb.Api.Controllers
             return Ok(await _participantService.GetParticipantByIdAsync(id, cancellationToken));
         }
 
-        [Authorize]
+        [Authorize(Policy = "AuthenticatedUser")]
         [HttpPost]
         public async Task<ActionResult<ParticipantCreateResponseDto>> CreateParticipant([FromForm] ParticipantCreateDto participantCreateDto,
             CancellationToken cancellationToken)
@@ -44,7 +44,7 @@ namespace EventsWeb.Api.Controllers
             return Ok(await _participantService.CreateParticipantAsync(participantCreateDto, cancellationToken));
         }
 
-        [Authorize]
+        [Authorize(Policy = "AuthenticatedUser")]
         [HttpDelete("{id:int}")]
         public async Task<ActionResult<ParticipantResponseDto>> DeleteParticipant(int id, CancellationToken cancellationToken)
         {

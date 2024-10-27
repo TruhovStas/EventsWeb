@@ -1,4 +1,6 @@
 ﻿using EventsWeb.DataAccess.Entities;
+using EventsWeb.DataAccess.Repositories;
+using EventsWeb.DataAccess.Repositories.Impl;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -29,13 +31,13 @@ namespace EventsWeb.DataAccess
 
         private static void AddUnitOfWork(this IServiceCollection services, IConfiguration configuration)
         {
-            //services.AddScoped<IUnitOfWork, UnitOfWork>();
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
         }
 
         private static void AddRepositories(this IServiceCollection services, IConfiguration configuration)
         {
-            //services.AddScoped<IParticipantRepository, ParticipantRepository>();
-            //services.AddScoped<IEventRepository, EventRepository>();
+            services.AddScoped<IParticipantRepository, ParticipantRepository>();
+            services.AddScoped<IEventRepository, EventRepository>();
         }
 
         private static void AddIdentity(this IServiceCollection services)

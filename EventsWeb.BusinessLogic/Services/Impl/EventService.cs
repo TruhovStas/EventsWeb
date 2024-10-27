@@ -7,7 +7,7 @@ using EventsWeb.Domain.Entities;
 
 namespace EventsWeb.BusinessLogic.Services.Impl
 {
-    internal class EventService : IEventService
+    public class EventService : IEventService
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;

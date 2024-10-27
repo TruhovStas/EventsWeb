@@ -1,6 +1,7 @@
 ﻿using EventsWeb.BusinessLogic.Models;
 using EventsWeb.BusinessLogic.Models.Events;
 using EventsWeb.BusinessLogic.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EventsWeb.Api.Controllers
@@ -36,7 +37,7 @@ namespace EventsWeb.Api.Controllers
             return Ok(await _eventService.GetEventByIdAsync(id, cancellationToken));
         }
 
-
+        [Authorize(Policy = "AuthenticatedUser")]
         [HttpPost]
         public async Task<ActionResult<EventCreateResponseDto>> CreateEvent([FromForm] EventCreateDto ev,
             CancellationToken cancellationToken)
@@ -44,8 +45,7 @@ namespace EventsWeb.Api.Controllers
             return Ok(await _eventService.CreateEventAsync(ev, cancellationToken));
         }
 
-
-
+        [Authorize(Policy = "AuthenticatedUser")]
         [HttpPut]
         public async Task<ActionResult<BaseResponseDto>> UpdateEvent([FromForm] EventUpdateDto ev,
             CancellationToken cancellationToken)
@@ -53,6 +53,7 @@ namespace EventsWeb.Api.Controllers
             return Ok(await _eventService.UpdateEventAsync(ev, cancellationToken));
         }
 
+        [Authorize(Policy = "AuthenticatedUser")]
         [HttpDelete("{id}")]
         public async Task<ActionResult<BaseResponseDto>> DeleteEvent(int id, CancellationToken cancellationToken)
         {
