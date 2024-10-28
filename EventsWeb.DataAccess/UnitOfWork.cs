@@ -4,11 +4,11 @@ namespace EventsWeb.DataAccess
 {
     public class UnitOfWork : IUnitOfWork
     {
-        private DbContext _dbContext;
+        private DatabaseContext _dbContext;
         private EventRepository _eventRepository;
         private ParticipantRepository _participantRepository;
 
-        public UnitOfWork(DbContext dbContext)
+        public UnitOfWork(DatabaseContext dbContext)
         {
             _dbContext = dbContext;
         }

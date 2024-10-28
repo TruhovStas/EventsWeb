@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace EventsWeb.DataAccess.Migrations
 {
-    [DbContext(typeof(DbContext))]
+    [DbContext(typeof(DatabaseContext))]
     partial class DbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

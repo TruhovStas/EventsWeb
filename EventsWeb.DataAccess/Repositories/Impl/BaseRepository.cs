@@ -6,10 +6,10 @@ namespace EventsWeb.DataAccess.Repositories.Impl
 {
     public abstract class BaseRepository<TEntity> : IBaseRepository<TEntity>, IDisposable where TEntity : BaseEntity
     {
-        protected readonly DbContext _context;
+        protected readonly DatabaseContext _context;
         protected readonly DbSet<TEntity> _dbSet;
 
-        protected BaseRepository(DbContext context)
+        protected BaseRepository(DatabaseContext context)
         {
             _context = context;
             _dbSet = context.Set<TEntity>();
@@ -33,7 +33,7 @@ namespace EventsWeb.DataAccess.Repositories.Impl
             return await _dbSet.Skip((page - 1) * pageSize).Take(pageSize).ToListAsync(cancellationToken);
         }
 
-        public async Task<TEntity> GetByIdAsync(int id, CancellationToken cancellationToken)
+        public async Task<TEntity> GetByIdAsync(int id, CancellationToken cancellationToken = default)
         {
             var entity = await _dbSet.Where(en => en.Id == id).FirstOrDefaultAsync(cancellationToken);
 

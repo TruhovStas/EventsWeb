@@ -12,7 +12,7 @@ namespace EventsWeb.DataAccess.Repositories
         Task<IEnumerable<TEntity>> GetByPageAsync(int page, int pageSize, CancellationToken cancellationToken = default);
         Task<IEnumerable<TEntity>> GetAllByPredicateAsync(Expression<Func<TEntity, bool>> predicate,
             CancellationToken cancellationToken = default);
-        Task<TEntity> AddAsync(TEntity entity, CancellationToken cancellationToken);
+        Task<TEntity> AddAsync(TEntity entity, CancellationToken cancellationToken = default);
         TEntity Update(TEntity entitty);
         TEntity Delete(TEntity entity);
     }

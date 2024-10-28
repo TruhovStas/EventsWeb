@@ -4,6 +4,6 @@ namespace EventsWeb.DataAccess.Repositories.Impl
 {
     public class EventRepository : BaseRepository<Event>, IEventRepository
     {
-        public EventRepository(DbContext context) : base(context) { }
+        public EventRepository(DatabaseContext context) : base(context) { }
     }
 }

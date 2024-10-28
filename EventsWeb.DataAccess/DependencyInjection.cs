@@ -21,10 +21,10 @@ namespace EventsWeb.DataAccess
 
         private static void AddDatabase(this IServiceCollection services, IConfiguration configuration)
         {
-            services.AddDbContext<DbContext>(options =>
+            services.AddDbContext<DatabaseContext>(options =>
             {
                 options.UseSqlServer(configuration["ConnectionString"],
-                    opt => opt.MigrationsAssembly(typeof(DbContext).Assembly.FullName));
+                    opt => opt.MigrationsAssembly(typeof(DatabaseContext).Assembly.FullName));
                 options.UseLazyLoadingProxies();
             });
         }
@@ -43,7 +43,7 @@ namespace EventsWeb.DataAccess
         private static void AddIdentity(this IServiceCollection services)
         {
             services.AddIdentityCore<User>()
-                .AddEntityFrameworkStores<DbContext>();
+                .AddEntityFrameworkStores<DatabaseContext>();
         }
     }
 }

@@ -7,9 +7,9 @@ using EventsWeb.Domain.Entities;
 
 namespace EventsWeb.DataAccess
 {
-    public class DbContext : IdentityDbContext<User, IdentityRole<int>, int>
+    public class DatabaseContext : IdentityDbContext<User, IdentityRole<int>, int>
     {
-        public DbContext(DbContextOptions<DbContext> options) : base(options) { }
+        public DatabaseContext(DbContextOptions<DatabaseContext> options) : base(options) { }
         public DbSet<Event> Events { get; set; }
         public DbSet<Participant> Participants { get; set; }
 

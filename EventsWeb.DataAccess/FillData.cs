@@ -8,7 +8,7 @@ namespace EventsWeb.DataAccess
 {
     public static class FillData
     {
-        public static async Task FillDatabaseAsync(DbContext context, UserManager<User> userManager, IUnitOfWork unitOfWork)
+        public static async Task FillDatabaseAsync(DatabaseContext context, UserManager<User> userManager, IUnitOfWork unitOfWork)
         {
             if (context.Database.GetPendingMigrations().Any())
             {

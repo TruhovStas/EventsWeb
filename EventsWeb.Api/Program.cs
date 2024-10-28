@@ -121,7 +121,7 @@ namespace EventsWeb
 
             using var scope = app.Services.CreateScope();
 
-            await FillData.FillDatabaseAsync(scope.ServiceProvider.GetRequiredService<DbContext>(),
+            await FillData.FillDatabaseAsync(scope.ServiceProvider.GetRequiredService<DatabaseContext>(),
                 scope.ServiceProvider.GetRequiredService<UserManager<User>>(),
                 scope.ServiceProvider.GetRequiredService<IUnitOfWork>());
 
