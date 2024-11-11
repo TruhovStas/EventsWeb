@@ -4,8 +4,9 @@ using EventsWeb.BusinessLogic.Models;
 using EventsWeb.BusinessLogic.Models.Events;
 using EventsWeb.DataAccess;
 using EventsWeb.Domain.Entities;
+using EventsWeb.Domain.Services;
 
-namespace EventsWeb.BusinessLogic.Services.Impl
+namespace EventsWeb.BusinessLogic.UseCases
 {
     public class EventService : IEventService
     {

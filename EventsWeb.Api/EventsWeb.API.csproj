@@ -19,7 +19,6 @@
     <ProjectReference Include="..\EventsWeb.BusinessLogic\EventsWeb.BusinessLogic.csproj" />
     <ProjectReference Include="..\EventsWeb.DataAccess\EventsWeb.DataAccess.csproj" />
     <ProjectReference Include="..\EventsWeb.Domain\EventsWeb.Domain.csproj" />
-    <ProjectReference Include="..\EventsWeb.Presentation\EventsWeb.Presentation.csproj" />
   </ItemGroup>
 
   <ItemGroup>

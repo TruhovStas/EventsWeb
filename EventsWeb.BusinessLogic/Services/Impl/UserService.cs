@@ -3,7 +3,6 @@ using EventsWeb.BusinessLogic.Models.Users;
 using EventsWeb.BusinessLogic.Models;
 using Microsoft.AspNetCore.Identity;
 using System.Security.Claims;
-using EventsWeb.DataAccess.Entities;
 
 namespace EventsWeb.BusinessLogic.Services.Impl
 {
@@ -53,7 +52,7 @@ namespace EventsWeb.BusinessLogic.Services.Impl
 
             var newUser = _mapper.Map<User>(userCreateDto);
 
-            var a =await _userManager.CreateAsync(newUser, userCreateDto.Password);
+            var a = await _userManager.CreateAsync(newUser, userCreateDto.Password);
             var claims = new List<Claim>()
                 {
                     new Claim(ClaimTypes.Name, newUser.UserName),

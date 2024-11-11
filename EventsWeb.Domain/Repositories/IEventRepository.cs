@@ -1,6 +1,6 @@
 ﻿using EventsWeb.Domain.Entities;
 
-namespace EventsWeb.DataAccess.Repositories
+namespace EventsWeb.Domain.Repositories
 {
     public interface IEventRepository : IBaseRepository<Event>
     {

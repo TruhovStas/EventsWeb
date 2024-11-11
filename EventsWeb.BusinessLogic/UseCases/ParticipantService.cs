@@ -5,7 +5,7 @@ using EventsWeb.BusinessLogic.Models.Participants;
 using EventsWeb.DataAccess;
 using EventsWeb.Domain.Entities;
 
-namespace EventsWeb.BusinessLogic.Services.Impl
+namespace EventsWeb.BusinessLogic.UseCases
 {
     public class ParticipantService : IParticipantService
     {

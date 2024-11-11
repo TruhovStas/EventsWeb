@@ -1,4 +1,5 @@
 ﻿using EventsWeb.Domain.Entities;
+using EventsWeb.Domain.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 namespace EventsWeb.DataAccess.Repositories.Impl

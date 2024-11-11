@@ -1,4 +1,3 @@
-using EventsWeb.BusinessLogic.Services.Impl;
 using EventsWeb.BusinessLogic.Services;
 using EventsWeb.DataAccess;
 using FluentValidation.AspNetCore;
@@ -13,6 +12,8 @@ using Microsoft.AspNetCore.Cors.Infrastructure;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.FileProviders;
 using EventsWeb.DataAccess.Entities;
+using EventsWeb.BusinessLogic.Services.Impl;
+using EventsWeb.BusinessLogic.UseCases;
 
 namespace EventsWeb
 {

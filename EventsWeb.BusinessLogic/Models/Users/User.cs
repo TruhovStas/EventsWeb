@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 
-namespace EventsWeb.DataAccess.Entities
+namespace EventsWeb.BusinessLogic.Models.Users
 {
     public class User : IdentityUser<int>
     {

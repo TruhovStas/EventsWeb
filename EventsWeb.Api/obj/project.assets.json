@@ -1765,7 +1765,7 @@
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
           "AutoMapper": "13.0.1",
-          "EventsWeb.DataAccess": "1.0.0",
+          "EventsWeb.Domain": "1.0.0",
           "FluentValidation": "11.10.0",
           "FluentValidation.AspNetCore": "11.3.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.10",
@@ -1803,16 +1803,6 @@
         },
         "runtime": {
           "bin/placeholder/EventsWeb.Domain.dll": {}
-        }
-      },
-      "EventsWeb.Presentation/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v8.0",
-        "compile": {
-          "bin/placeholder/EventsWeb.Presentation.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/EventsWeb.Presentation.dll": {}
         }
       }
     }
@@ -4700,11 +4690,6 @@
       "type": "project",
       "path": "../EventsWeb.Domain/EventsWeb.Domain.csproj",
       "msbuildProject": "../EventsWeb.Domain/EventsWeb.Domain.csproj"
-    },
-    "EventsWeb.Presentation/1.0.0": {
-      "type": "project",
-      "path": "../EventsWeb.Presentation/EventsWeb.Presentation.csproj",
-      "msbuildProject": "../EventsWeb.Presentation/EventsWeb.Presentation.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -4712,7 +4697,6 @@
       "EventsWeb.BusinessLogic >= 1.0.0",
       "EventsWeb.DataAccess >= 1.0.0",
       "EventsWeb.Domain >= 1.0.0",
-      "EventsWeb.Presentation >= 1.0.0",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 8.0.10",
       "Microsoft.EntityFrameworkCore.Design >= 8.0.10",
       "Swashbuckle.AspNetCore >= 6.9.0"
@@ -4759,9 +4743,6 @@
             },
             "D:\\Учёба\\csharp\\EventsWeb\\EventsWeb.Domain\\EventsWeb.Domain.csproj": {
               "projectPath": "D:\\Учёба\\csharp\\EventsWeb\\EventsWeb.Domain\\EventsWeb.Domain.csproj"
-            },
-            "D:\\Учёба\\csharp\\EventsWeb\\EventsWeb.Presentation\\EventsWeb.Presentation.csproj": {
-              "projectPath": "D:\\Учёба\\csharp\\EventsWeb\\EventsWeb.Presentation\\EventsWeb.Presentation.csproj"
             }
           }
         }

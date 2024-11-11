@@ -1,19 +1,21 @@
 ﻿using EventsWeb.DataAccess.Repositories.Impl;
+using EventsWeb.Domain.Repositories;
+using EventsWeb.Domain;
 
 namespace EventsWeb.DataAccess
 {
     public class UnitOfWork : IUnitOfWork
     {
         private DatabaseContext _dbContext;
-        private EventRepository _eventRepository;
-        private ParticipantRepository _participantRepository;
+        private IEventRepository _eventRepository;
+        private IParticipantRepository _participantRepository;
 
         public UnitOfWork(DatabaseContext dbContext)
         {
             _dbContext = dbContext;
         }
 
-        public EventRepository Events
+        public IEventRepository Events
         {
             get
             {
@@ -23,7 +25,7 @@ namespace EventsWeb.DataAccess
             }
         }
 
-        public ParticipantRepository Participants
+        public IParticipantRepository Participants
         {
             get
             {

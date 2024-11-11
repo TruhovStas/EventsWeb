@@ -1,8 +1,9 @@
 ﻿using AutoMapper;
 using EventsWeb.BusinessLogic.Exceptions;
 using EventsWeb.BusinessLogic.Models.Events;
-using EventsWeb.BusinessLogic.Services.Impl;
+using EventsWeb.BusinessLogic.UseCases;
 using EventsWeb.DataAccess;
+using EventsWeb.Domain;
 using EventsWeb.Domain.Entities;
 using Microsoft.AspNetCore.Routing;
 using Microsoft.EntityFrameworkCore;
