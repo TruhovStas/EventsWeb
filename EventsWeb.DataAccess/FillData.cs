@@ -1,8 +1,9 @@
 ﻿using System.Security.Claims;
-using EventsWeb.DataAccess.Entities;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using EventsWeb.Domain.Entities;
+using EventsWeb.BusinessLogic.Models.Users;
+using EventsWeb.Domain;
 
 namespace EventsWeb.DataAccess
 {

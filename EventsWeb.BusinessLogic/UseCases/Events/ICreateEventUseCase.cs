@@ -4,6 +4,6 @@ namespace EventsWeb.BusinessLogic.UseCases.Events
 {
     public interface ICreateEventUseCase
     {
-        Task<EventCreateResponseDto> ExecuteAsync(EventCreateDto eventCreateDto, CancellationToken cancellationToken)
+        Task<EventCreateResponseDto> ExecuteAsync(EventCreateDto eventCreateDto, CancellationToken cancellationToken);
     }
 }

@@ -1,6 +1,6 @@
 ﻿using EventsWeb.BusinessLogic.Models;
 using EventsWeb.BusinessLogic.Models.Events;
-using EventsWeb.BusinessLogic.Services;
+using EventsWeb.BusinessLogic.UseCases.Events;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -10,31 +10,48 @@ namespace EventsWeb.Api.Controllers
     [ApiController]
     public class EventController : ControllerBase
     {
-        private readonly IEventService _eventService;
+        private readonly ICreateEventUseCase _createEventUseCase;
+        private readonly IDeleteEventUseCase _deleteEventUseCase;
+        private readonly IGetEventByIdUseCase _getEventByIdUseCase;
+        private readonly IGetEventsByPageUseCase _getEventsByPageUseCase;
+        private readonly IGetEventsUseCase _getEventsUseCase;
+        private readonly IUpdateEventUseCase _updateEventUseCase;
 
-        public EventController(IEventService eventService)
+        public EventController(
+            ICreateEventUseCase createEventUseCase,
+            IDeleteEventUseCase deleteEventUseCase,
+            IGetEventByIdUseCase getEventByIdUseCase,
+            IGetEventsByPageUseCase getEventsByPageUseCase,
+            IGetEventsUseCase getEventsUseCase,
+            IUpdateEventUseCase updateEventUseCase
+            )
         {
-            _eventService = eventService;
+            _createEventUseCase = createEventUseCase;
+            _deleteEventUseCase = deleteEventUseCase;
+            _getEventByIdUseCase = getEventByIdUseCase;
+            _getEventsByPageUseCase = getEventsByPageUseCase;
+            _getEventsUseCase = getEventsUseCase;
+            _updateEventUseCase = updateEventUseCase;
         }
 
         [HttpGet]
         public async Task<ActionResult<IEnumerable<EventResponseDto>>> GetEvents(CancellationToken cancellationToken)
         {
-            return Ok(await _eventService.GetEventsAsync(cancellationToken));
+            return Ok(await _getEventsUseCase.ExecuteAsync(cancellationToken));
         }
 
         [HttpGet("{page}/{pageSize}")]
         public async Task<ActionResult<IEnumerable<EventResponseDto>>> GetEventsByPage(int page, int pageSize,
         CancellationToken cancellationToken)
         {
-            return Ok(await _eventService.GetEventsByPageAsync(page, pageSize, cancellationToken));
+            return Ok(await _getEventsByPageUseCase.ExecuteAsync(page, pageSize, cancellationToken));
         }
 
 
         [HttpGet("{id}")]
         public async Task<ActionResult<EventResponseDto>> GetEventById(int id, CancellationToken cancellationToken)
         {
-            return Ok(await _eventService.GetEventByIdAsync(id, cancellationToken));
+            return Ok(await _getEventByIdUseCase.ExecuteAsync(id, cancellationToken));
         }
 
         [Authorize(Policy = "AuthenticatedUser")]
@@ -42,7 +59,7 @@ namespace EventsWeb.Api.Controllers
         public async Task<ActionResult<EventCreateResponseDto>> CreateEvent([FromForm] EventCreateDto ev,
             CancellationToken cancellationToken)
         {
-            return Ok(await _eventService.CreateEventAsync(ev, cancellationToken));
+            return Ok(await _createEventUseCase.ExecuteAsync(ev, cancellationToken));
         }
 
         [Authorize(Policy = "AuthenticatedUser")]
@@ -50,14 +67,14 @@ namespace EventsWeb.Api.Controllers
         public async Task<ActionResult<BaseResponseDto>> UpdateEvent([FromForm] EventUpdateDto ev,
             CancellationToken cancellationToken)
         {
-            return Ok(await _eventService.UpdateEventAsync(ev, cancellationToken));
+            return Ok(await _updateEventUseCase.ExecuteAsync(ev, cancellationToken));
         }
 
         [Authorize(Policy = "AuthenticatedUser")]
         [HttpDelete("{id}")]
         public async Task<ActionResult<BaseResponseDto>> DeleteEvent(int id, CancellationToken cancellationToken)
         {
-            return Ok(await _eventService.DeleteEventAsync(id, cancellationToken));
+            return Ok(await _deleteEventUseCase.ExecuteAsync(id, cancellationToken));
         }
     }
 }

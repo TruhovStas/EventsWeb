@@ -22,6 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\EventsWeb.BusinessLogic\EventsWeb.BusinessLogic.csproj" />
     <ProjectReference Include="..\EventsWeb.Domain\EventsWeb.Domain.csproj" />
   </ItemGroup>
 

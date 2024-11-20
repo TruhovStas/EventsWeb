@@ -4,6 +4,6 @@ namespace EventsWeb.BusinessLogic.UseCases.Participants
 {
     public interface ICreateParticipantUseCase
     {
-        Task<ParticipantCreateResponseDto> CreateParticipantAsync(ParticipantCreateDto participantCreateDto, CancellationToken cancellationToken);
+        Task<ParticipantCreateResponseDto> ExecuteAsync(ParticipantCreateDto participantCreateDto, CancellationToken cancellationToken);
     }
 }

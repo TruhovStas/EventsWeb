@@ -1,7 +1,6 @@
 using FluentValidation;
 using EventsWeb.BusinessLogic.Models.Users;
 using Microsoft.AspNetCore.Identity;
-using EventsWeb.DataAccess.Entities;
 
 namespace EventsWeb.BusinessLogic.Models.Validators.Users
 {

@@ -1,4 +1,5 @@
 ﻿using EventsWeb.Domain.Entities;
+using EventsWeb.Domain.Repositories;
 using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
 

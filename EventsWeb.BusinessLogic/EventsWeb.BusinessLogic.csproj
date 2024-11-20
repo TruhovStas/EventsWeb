@@ -18,9 +18,4 @@
     <ProjectReference Include="..\EventsWeb.Domain\EventsWeb.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="UseCases\Events\Impl\" />
-    <Folder Include="UseCases\Participants\Impl\" />
-  </ItemGroup>
-
 </Project>

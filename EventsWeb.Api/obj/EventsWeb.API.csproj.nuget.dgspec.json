@@ -208,6 +208,9 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
+              "D:\\Учёба\\csharp\\EventsWeb\\EventsWeb.BusinessLogic\\EventsWeb.BusinessLogic.csproj": {
+                "projectPath": "D:\\Учёба\\csharp\\EventsWeb\\EventsWeb.BusinessLogic\\EventsWeb.BusinessLogic.csproj"
+              },
               "D:\\Учёба\\csharp\\EventsWeb\\EventsWeb.Domain\\EventsWeb.Domain.csproj": {
                 "projectPath": "D:\\Учёба\\csharp\\EventsWeb\\EventsWeb.Domain\\EventsWeb.Domain.csproj"
               }

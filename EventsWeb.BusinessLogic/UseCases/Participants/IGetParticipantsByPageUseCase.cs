@@ -4,6 +4,7 @@ namespace EventsWeb.BusinessLogic.UseCases.Participants
 {
     public interface IGetParticipantsByPageUseCase
     {
-        Task<IEnumerable<ParticipantResponseDto>> GetParticipantsByPageAsync(int page, int pageSize, CancellationToken cancellationToken);
+        Task<IEnumerable<ParticipantResponseDto>> ExecuteAsync(int eventId, int page, int pageSize,
+            CancellationToken cancellationToken);
     }
 }

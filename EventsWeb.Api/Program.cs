@@ -1,4 +1,3 @@
-using EventsWeb.BusinessLogic.Services;
 using EventsWeb.DataAccess;
 using FluentValidation.AspNetCore;
 using FluentValidation;
@@ -11,9 +10,9 @@ using EventsWeb.Api.Middlewares;
 using Microsoft.AspNetCore.Cors.Infrastructure;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.FileProviders;
-using EventsWeb.DataAccess.Entities;
-using EventsWeb.BusinessLogic.Services.Impl;
-using EventsWeb.BusinessLogic.UseCases;
+using EventsWeb.BusinessLogic;
+using EventsWeb.Domain;
+using EventsWeb.BusinessLogic.Models.Users;
 
 namespace EventsWeb
 {
@@ -32,11 +31,7 @@ namespace EventsWeb
             builder.Services.AddAutoMapper(typeof(IMappingProfile));
             builder.Services.AddFluentValidationAutoValidation();
             builder.Services.AddValidatorsFromAssemblyContaining<IValidator>();
-            builder.Services.AddTransient<IFileService, FileService>();
-            builder.Services.AddTransient<IEventService, EventService>();
-            builder.Services.AddTransient<IParticipantService, ParticipantService>();
-            builder.Services.AddTransient<ITokenService, TokenService>();
-            builder.Services.AddTransient<IUserService, UserService>();
+            builder.Services.AddBLDependencyInjection();
             builder.Services.AddAuthorization(options =>
             {
                 options.AddPolicy("AuthenticatedUser", policy =>

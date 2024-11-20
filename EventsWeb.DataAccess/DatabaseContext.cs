@@ -1,9 +1,9 @@
-﻿using EventsWeb.DataAccess.Entities;
-using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection;
 using EventsWeb.Domain.Entities;
+using EventsWeb.BusinessLogic.Models.Users;
 
 namespace EventsWeb.DataAccess
 {

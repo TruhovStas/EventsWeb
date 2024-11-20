@@ -1,6 +1,7 @@
-﻿using EventsWeb.DataAccess.Entities;
-using EventsWeb.DataAccess.Repositories;
+﻿using EventsWeb.BusinessLogic.Models.Users;
 using EventsWeb.DataAccess.Repositories.Impl;
+using EventsWeb.Domain;
+using EventsWeb.Domain.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;

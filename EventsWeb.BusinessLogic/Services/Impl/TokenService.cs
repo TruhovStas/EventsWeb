@@ -1,5 +1,5 @@
 ﻿using EventsWeb.BusinessLogic.Models;
-using EventsWeb.DataAccess.Entities;
+using EventsWeb.BusinessLogic.Models.Users;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
